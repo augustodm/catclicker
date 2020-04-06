@@ -1,18 +1,23 @@
 @charset "UTF-8";
 
 figure.foto-gato {
-    background-color: rgb(72, 2, 90);
+    background-color: gray;
     padding: 20px;
-    position: absolute;
     border: 8px solid black;
-    box-shadow: 5px 5px 10px black;
 }
 figure.foto-gato img {
-width: 100%;
-height: 100%;
+width: 33%;
 }
 figure.foto-gato figcaption {
     position: relative;
     text-align: center;
+    color: white;
+}
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+figure.foto-gato li {
     color: white;
 }
