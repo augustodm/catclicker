@@ -6,12 +6,13 @@ figure.foto-gato {
     border: 8px solid black;
 }
 figure.foto-gato img {
-width: 33%;
+width: 60%;
 }
 figure.foto-gato figcaption {
     position: relative;
-    text-align: center;
+    text-align: match-parent;
     color: white;
+    font-size: 30px;
 }
 body {
     display:flex;

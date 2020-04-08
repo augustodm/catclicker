@@ -1,15 +1,13 @@
-var gatos = document.getElementsByClassName ("cat");
-var counter = 0;
-for (i = 0; gatos.length; i++ ){
-    gatos[i].addEventListener("click" , function(){
-        counter++;
-        var frase = document.getElementById('legend');
-        frase.innerHTML = "cliques: " + counter;
-    });
+var gatos = document.getElementsByClassName("cat");
+var cats = [];
+
+for (var i =0; i < gatos.length; i++) {
+    cats.push({ element: gatos[i], counter: 0});
+    gatos[i].addEventListener("click", (function(index, counter){
+        return function () {
+            counter++;
+            var legendElement = document.getElementById('legend' + index);
+            legendElement.innerHTML = "cliques: " + counter;   
+        }
+    })(i, cats[i].counter))
 }
-/*var legenda = document.getElementById("legend");
-    document.createElement("FIGCAPTION");
-    var frase = document.createTextNode("teste " + i);
-    legenda.appendChild(frase);
-    var img = document.getElementsByClassName("cat");
-    img.appendChild(legenda);*/
